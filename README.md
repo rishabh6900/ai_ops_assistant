@@ -78,15 +78,16 @@ and tell me the current weather in Chennai.
 3. Install Dependencies 
    pip install -r requirements.txt 
 
-4. Configure Environment Variables 
+4. Configure Environment Variables
+   
    GOOGLE_API_KEY="------------"
    GITHUB_TOKEN="-----------"
    OPENWEATHER_API_KEY='---------'
 
-5. Run the Application  
+6. Run the Application  
    python -m streamlit run main.py 
 
-6. Open browser at: 
+7. Open browser at: 
    http://localhost:8501  
    If http://localhost:8501 does not open, check where Streamlit is running.
    When you run python -m streamlit run main.py, it shows a link after a few seconds—just click that link.
