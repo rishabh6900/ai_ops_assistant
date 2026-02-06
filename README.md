@@ -90,3 +90,7 @@ and tell me the current weather in Chennai.
    http://localhost:8501  
    If http://localhost:8501 does not open, check where Streamlit is running.
    When you run python -m streamlit run main.py, it shows a link after a few seconds—just click that link.
+
+
+# LIVE LINK 
+https://aiopsassistant-dgtfa77vc4xjew7s8wgipz.streamlit.app/
