@@ -1,0 +1,5 @@
+conda create -n ai_ops_assistant python=3.10
+conda activate ai_ops_assistant
+pip install -r requirements.txt
+python -m streamlit run main.py
+conda remove --name ai_ops_assistant --all
