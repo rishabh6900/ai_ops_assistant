@@ -5,12 +5,15 @@ def executor_agent(plan):
     results = []
 
     for step in plan.steps:
-        if step.tool == "github_search":
-            output = search_github_repos(step.input)
-        elif step.tool == "weather_lookup":
-            output = get_weather(step.input)
-        else:
-            output = {"error": "Unknown tool"}
+        try:
+            if step.tool == "github_search":
+                output = search_github_repos(step.input)
+            elif step.tool == "weather_lookup":
+                output = get_weather(step.input)
+            else:
+                output = {"error": f"Unknown tool requested: '{step.tool}'"}
+        except Exception as e:
+            output = {"error": f"Tool execution failed: {str(e)}"}
 
         results.append({
             "step": step.step,
@@ -19,3 +22,4 @@ def executor_agent(plan):
         })
 
     return results
+
